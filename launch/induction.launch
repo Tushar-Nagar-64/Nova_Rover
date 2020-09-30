@@ -1,0 +1,14 @@
+<launch>
+	<group ns="turtlesim1">
+		<node name="pub" pkg="induction_task" type="python_publisher_1.py" output="screen"> </node>
+	</group>
+
+	<group ns="turtlesim2">
+		<node name="sub" pkg="induction_task" type="csub.cpp" output="screen" />
+	</group>
+    
+	<node pkg="turtlesim" name="mimic" type="mimic">
+		<remap from="input" to="turtlesim1/turtle1"/>
+		<remap from="output" to="turtlesim2/turtle1"/>
+	</node>
+</launch>

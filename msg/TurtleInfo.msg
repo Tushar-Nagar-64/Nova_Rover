@@ -1,1 +1,2 @@
-int64 quality
+uint8 quality
+

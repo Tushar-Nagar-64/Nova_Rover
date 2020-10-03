@@ -11,6 +11,7 @@ using namespace std;
 // The callback when data has been received
 void turtleCallback(const induction_task::TurtleInfo::ConstPtr& msg) {
   ROS_INFO("I heard: [%s]", msg->quality.c_str());
+  ROS_INFO("I heard: [%s]", msg->index.c_str());
 }
 
 // The main function called when executed

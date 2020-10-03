@@ -4,7 +4,7 @@
 	</group>
 
 	<group ns="turtlesim2">
-		<node name="sub" pkg="induction_task" type="csub.cpp" output="screen" />
+		<node name="sub" pkg="induction_task" type="csub" output="screen" />
 	</group>
     
 	<node pkg="turtlesim" name="mimic" type="mimic">

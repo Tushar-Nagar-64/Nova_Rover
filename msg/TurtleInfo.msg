@@ -1,2 +1,3 @@
-uint8 quality
+string quality
+string index
 

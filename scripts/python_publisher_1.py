@@ -17,13 +17,15 @@ while not rospy.is_shutdown():
 	
 	if Quality_run>=7: # Only returning turtles with a high enough quality
 		
-		msg.quality = (Quality_run, Index_count)
+		msg.quality = str(Quality_run)
+		msg.index = str(Index_count)
 
 		rospy.loginfo(msg)
 		pub.publish(msg)
 		rate.sleep()
 
 	else: # If quality <7, dont return anything
+		rate.sleep()
 		pass
 
 if __name__ == '__main__':
